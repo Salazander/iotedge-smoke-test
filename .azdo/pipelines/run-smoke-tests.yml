@@ -1,0 +1,16 @@
+# Basic pipeline running the smoke tests
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+- group: ci-pipeline
+- name: DEVICE_CONNECTION_STRING
+  value: $(edge-device-connection-string)
+
+steps:
+- script: scripts/run-smoke-tests-in-edgedev-container.sh
+  displayName: 'Run smoke tests'
+  workingDirectory: SmokeTestIoTEdgeSolution
+  env: # this is required for secret library variables
+      DEVICE_CONNECTION_STRING: $(DEVICE_CONNECTION_STRING)
