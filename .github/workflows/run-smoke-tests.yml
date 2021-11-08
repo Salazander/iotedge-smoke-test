@@ -22,3 +22,5 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run smoke tests
         run: scripts/run-smoke-tests-in-edgedev-container.sh
+        env:
+          DEVICE_CONNECTION_STRING: "${{ secrets.DEVICE_CONNECTION_STRING }}"
