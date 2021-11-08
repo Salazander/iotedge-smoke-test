@@ -9,7 +9,8 @@ This repo contains sample scripts and CI-pipelines that perform smoke tests on a
 4. Open solution in devcontainer (definition is located in `iotedge-smoke-test/SmokeTestIoTEdgeSolution/.devcontainer/`).
 5. Configure the IoT Edge device connection string by adding the following line to the `.env` file
 
-    `DEVICE_CONNECTION_STRING=<replace-with-connection-string-to-your-edge-device>` in .
+    `DEVICE_CONNECTION_STRING=<replace-with-connection-string-to-your-edge-device>`
+    
 6. Run predefined task named `Run Smoke Tests`.
 7. The task will report errors, which is what the smoke tests were designed for. There is something wrong in BuggyModule that gets picked up by the test.
 
