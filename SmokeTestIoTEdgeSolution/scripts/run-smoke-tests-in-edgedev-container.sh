@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -euxo pipefail
-#!cp ../config/deployment.debug.amd64.json ./deployment.json
+
 source .env
 
 sudo docker run \
